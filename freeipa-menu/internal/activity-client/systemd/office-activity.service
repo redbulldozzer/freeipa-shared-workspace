@@ -1,0 +1,18 @@
+[Unit]
+Description=Office Activity — employee session statistics
+After=graphical-session.target
+PartOf=graphical-session.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/office-activity collect
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+UMask=0077
+NoNewPrivileges=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+

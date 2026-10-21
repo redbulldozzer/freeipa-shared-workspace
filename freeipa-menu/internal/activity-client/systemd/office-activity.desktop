@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Office Activity
+Comment=Статистика активности текущего сотрудника
+Exec=/usr/local/bin/office-activity-session
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
