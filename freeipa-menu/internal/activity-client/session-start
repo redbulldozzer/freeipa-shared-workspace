@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+[ "${XDG_SESSION_TYPE:-}" = x11 ] || exit 0
+[ -n "${XDG_SESSION_ID:-}" ] || exit 0
+[ "$(id -u)" -ge 1000 ] || exit 0
+systemctl --user import-environment DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS XDG_SESSION_ID XDG_SESSION_TYPE
+systemctl --user reset-failed office-activity.service || true
+exec systemctl --user start office-activity.service
