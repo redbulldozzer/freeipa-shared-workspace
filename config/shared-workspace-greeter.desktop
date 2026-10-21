@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Shared workspace greeter
+Comment=FreeIPA sign-in for a shared desktop
+Exec=/usr/local/libexec/shared-workspace-greeter
+Type=Application

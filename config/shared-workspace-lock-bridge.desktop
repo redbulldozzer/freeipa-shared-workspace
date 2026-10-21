@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Shared workspace lock bridge
+Exec=/usr/local/libexec/shared-workspace-lock-bridge
+OnlyShowIn=X-Cinnamon;
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
